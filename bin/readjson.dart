@@ -16,6 +16,7 @@ void main(List<String> arguments) {
     for (var item in date) {
       var aaa = Person.fromjson(item);
       persons.add(aaa);
+
     }
 
     persons.forEach((p) {
