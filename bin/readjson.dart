@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:readjson/person.dart';
 
 void main(List<String> arguments) {
@@ -14,13 +13,13 @@ void main(List<String> arguments) {
     var date = jsonDecode(value);
 
     for (var item in date) {
-      var aaa = Person.fromjson(item);
-      persons.add(aaa);
+      var person = Person.fromjson(item);
+      persons.add(person);
 
     }
 
-    persons.forEach((p) {
-      p.show();
+    persons.forEach((person) {
+      person.show();
     });
   });
 }
