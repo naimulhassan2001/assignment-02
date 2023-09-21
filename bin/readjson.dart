@@ -14,11 +14,7 @@ void main(List<String> arguments) {
     var date = jsonDecode(value);
 
     for (var item in date) {
-      var aaa = Person(
-          firstName: item['firstName'],
-          lastName: item['lastName'],
-          address: item['address']);
-
+      var aaa = Person.fromjson(item);
       persons.add(aaa);
     }
 
@@ -27,3 +23,4 @@ void main(List<String> arguments) {
     });
   });
 }
+
